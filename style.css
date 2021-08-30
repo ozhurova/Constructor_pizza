@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'LC Chalk';
+    src: url('fonts/LCChalk.woff2') format('woff2'),
+    url('fonts/LCChalk.ttf') format('truetype'),
+    url('fonts/LCChalk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/fon2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'LC Chalk', arial;
+}
+
+/* container **************************/
+#container {
+    max-width: 1400px;
+    background-color: rgba(20, 20, 20, 0.87);
+    font-weight: 500;
+    color: #fff;
+    font-size: 20px;
+    margin: 30px auto;
+}
+
+.block1, .block2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 3%;
+}
+
+/* Область заказа*****************************/
+.receipt {
+    position: relative;
+}
+
+.order-area {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#total {
+    position: absolute;
+    bottom: 15%;
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 15px;
+    letter-spacing: 3px;
+}
+
+#order-list > li {
+    letter-spacing: 2px;
+    margin: 10px 0 0 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* картинка  пицца ****************/
+#pizza-loader {
+    width: 400px;
+    height: 400px;
+    background-image: url("img/0.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrapper-pizza{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Кнопка заказа ****************/
+#button-order {
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgb(88, 84, 84);
+    border-radius: 10px;
+}
+
+/* Игридиенты*************************/
+.form {
+    overflow: hidden;
+    margin: 10px;
+}
+.label {
+    display: block;
+    margin-left: 25px;
+}
+
+.ingrid {
+    width: 100%;
+    position: relative;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.ingrid::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top:110%;
+    left: 0;
+    border-bottom: 3px solid rgba(231, 28, 28, 0.60);
+}
+
+.check-box {
+    position: absolute;
+    visibility: hidden;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.check-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -25px;
+    margin-top: 5px;
+}
+
+.check-box:checked + .check-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url('img/checked-on.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.check-box:checked + .check-style + span {
+    color: red;
+}
+
+
+/* Сообщение оформленного заказа*************************/
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(20, 20, 20, 0.459);
+}
+
+#order-message {
+    font-family: serif;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+#order-message > p {
+    position: absolute;
+    bottom: 20%;
+
+}
+
+.orderMessageImg {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-image: url('img/orderMassegeImg4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#order-message > h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#order-message > h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(48, 48, 48);
+
+}
+
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgb(253, 7, 7);
+    cursor: pointer;
+}
+
+/* Media *********************/
+
+@media (max-width: 750px) {
+    #container {
+        margin: 10px auto;
+    }
+
+    .block2 {
+        flex-wrap: wrap;
+        flex: 1 1;
+    }
+
+    .receipt {
+        height: 370px;
+    }
+
+    .wrapper-pizza {
+        margin: 0 auto;
+    }
+
+    form {
+        margin: 15px 15px;
+        min-width: 30%;
+        flex: 1 1;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .block1 {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .receipt {
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .block2 {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    form {
+        margin: 10px auto;
+    }
+
+    #order-message {
+        width: 300px;
+        height: 300px;
+    }
+
+    #order-message > h1 {
+        font-size: 30px;
+    }
+
+    #order-message > h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    #container {
+        margin: 5px 5px;
+        padding: 0;
+    }
+
+    #order-message {
+        width: 250px;
+    }
+
+    .wrapper-pizza {
+        margin: 0;
+    }
+
+    #pizza-loader {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    #order-list > li {
+        margin: 10px 0 0 20px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    #container {
+        width: 100%;
+        padding: 5px 15px;
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .wrapper-pizza {
+        margin: 0;
+    }
+
+    #pizza-loader {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+
+    #button-order {
+        margin: 0 60px
+    }
+
+
+}
+
+@media (max-width: 280px) {
+    #pizza-loader {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .receipt {
+        height: 500px;
+    }
+
+    #order-list > li, #total-price, .receipt {
+        font-size: 16px;
+
+    }
+
+    #button-order {
+        margin: 0 20px
+    }
+}

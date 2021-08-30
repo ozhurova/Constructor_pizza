@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/4.png" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+        <div class="block1">
+            <div class='receipt'>
+                <p class="order-area">Область просмотра заказа</p>
+                <ul id="order-list" name="base">
+                </ul>
+
+                <div id="total">Стоимость:  <span id="total-price"></span>  $</div>
+            </div>
+            <div class="wrapper-pizza" >
+                <div id="pizza-loader">
+                </div>
+                <button id="button-order" disabled=true> Заказать</button>
+            </div>
+        </div>
+        <div class="block2">
+            <form  name="base" class="form">
+                <h3 class='ingrid'>Основа для пиццы</h3>
+                <label class="label"><input class="check-box pizza-base" type="checkbox" data-type="base" name="classic_base"><span class="check-style"></span><span>Основа "Классика"</span></label>
+                <label class="label"><input class="check-box pizza-base" type="checkbox" data-type="base" name="thin_base" ><span class="check-style"></span><span>Основа тонкая</span></label>
+                <label class="label"><input class="check-box pizza-base" type="checkbox" data-type="base" name="cheese_base" ><span class="check-style"></span><span>Основа "Сырный борт" </span></label>
+                <label class="label"><input class="check-box pizza-base" type="checkbox" data-type="base" name="hot-dog_base"><span class="check-style"></span><span>Основа "Хот-Дог борт"</span></label>
+            </form>
+
+            <form name="meat" class="form">
+                <h3 class='ingrid'>Мясная начинка</h3>
+                <label class="label"><input class="check-box" type="checkbox" data-type="meat" name= "bavarian_sausages"><span class="check-style" ></span><span>Баварские колбаски</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="meat" name = "bacon"  ><span class="check-style" ></span><span>Бекон</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="meat" name ="chicken"><span class="check-style" ></span><span>Курица</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="meat" name ="shrimp"><span class="check-style" ></span><span>Креветки</span></label>
+            </form>
+
+            <form name="veg" class="form">
+                <h3 class='ingrid'>Овощная начинка</h3>
+                <label class="label"><input class="check-box" type="checkbox" data-type="veg" name="olives"><span class="check-style"></span><span>Маслины </span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="veg" name="bell_pepper"><span class="check-style"></span><span>Сладкий перец</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="veg" name="champignon"><span class="check-style"></span><span>Шампиньоны</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="veg" name="onion"><span class="check-style"></span><span>Лук</span></label>
+            </form>
+
+            <form name="sauce" class="form">
+                <h3 class='ingrid'>Соус</h3>
+                <label class="label"><input class="check-box" type="checkbox" data-type="sauce" name="garlic"><span class="check-style"></span><span>Соус "Чесночный"</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="sauce" name="barbecue"><span class="check-style"></span><span>Соус "Барбекю"</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="sauce" name="curry"><span class="check-style"></span><span>Соус "Карри"</span></label>
+                <label class="label"><input class="check-box" type="checkbox" data-type="sauce" name="pepperoni"><span class="check-style"></span><span>Соус "Пепперони"</span></label>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
